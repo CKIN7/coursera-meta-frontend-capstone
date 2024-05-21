@@ -1,10 +1,11 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 import { Header } from './Header';
 import { Booking } from './Booking';
 import { useReducer } from 'react';
+import { ConfirmedBooking } from './ConfirmedBooking';
 
 export const Main = () => {
-    const seedRandom = function (seed) {
+    const seedRandom = (seed) => {
         var m = 2 ** 35 - 31;
         var a = 185852;
         var s = seed % m;
@@ -13,7 +14,7 @@ export const Main = () => {
         };
     };
 
-    const fetchAPI = function (date) {
+    const fetchAPI = (date) => {
         let result = [];
         let random = seedRandom(date.getDate());
         for (let i = 17; i <= 23; i++) {
@@ -27,12 +28,24 @@ export const Main = () => {
         return result;
     };
 
-    const initialState = { availableTimes: fetchAPI(new Date()) };
-    const [state, dispatch] = useReducer(updateTimes, initialState);
+    const submitApi = (formData) => {
+        return true;
+    };
 
     const updateTimes = (state, date) => {
         return { availableTimes: fetchAPI(new Date()) };
     };
+
+    const initialState = { availableTimes: fetchAPI(new Date()) };
+    const [state, dispatch] = useReducer(updateTimes, initialState);
+
+    const navigate = useNavigate();
+    function submitForm(formData) {
+        if (submitApi(formData)) {
+            navigate('/confirmed');
+        }
+    }
+
     return (
         <main>
             <Routes>
@@ -46,13 +59,13 @@ export const Main = () => {
                         <Booking
                             availableTimes={state}
                             dispatch={dispatch}
-                            SubmitForm={SubmitForm}
+                            submitForm={submitForm}
                         />
                     }
                 />
                 <Route
-                    path="/"
-                    element={<Header />}
+                    path="/confirmed"
+                    element={<ConfirmedBooking />}
                 />
             </Routes>
         </main>

@@ -1,12 +1,13 @@
 import { Navbar } from './components/Navbar';
 import './App.css';
-import { Header } from './components/Header';
+
+import { Main } from './components/Main';
 
 export const App = () => {
     return (
         <>
             <Navbar />
-            <Header />
+            <Main />
         </>
     );
 };
