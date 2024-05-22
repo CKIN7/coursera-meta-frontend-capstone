@@ -46,7 +46,7 @@ export const Navbar = () => {
                     <a href="/">Order Now</a>
                 </li>
                 <li>
-                    <a href="/">My account</a>
+                    <a href="/">My Account</a>
                 </li>
             </ul>
         </nav>
