@@ -1,8 +1,10 @@
-# React + Vite
+# Little Lemon Booking
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
 
-Currently, two official plugins are available:
+Built as part of Meta's Coursera Front-End Development course, this project showcases my skills in creating a booking application for the Little Lemon Website using React Components.
+Key Features
+Implemented a fully functional "Reserve a Table" feature, demonstrating my understanding of React and API integration.
+Designed a visually appealing website, highlighting my front-end development skills.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Note: Currently, only the "Reserve a Table" function is operational, with other features still in development.
