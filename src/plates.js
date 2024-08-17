@@ -3,7 +3,7 @@ const recipes = [
         id: 1,
         title: 'Greek salad',
         price: 13.99,
-        image: '../public/images/greek-salad.jpg',
+        image: '../images/greek-salad.jpg',
         description:
             'Also known as horiatiki, this traditional Greek recipe is made with cherry tomatoes, cucumbers,',
     },
@@ -11,7 +11,7 @@ const recipes = [
         id: 2,
         title: 'Bruchetta',
         price: 4.99,
-        image: '../public/images/bruschetta.jpg',
+        image: '../images/bruschetta.jpg',
         description:
             'The bruschetta sauce is so exquisite as it contains all the quality of the Italian tradition. The ingredients are in fact those typical of the Mediterranean',
     },
@@ -19,7 +19,7 @@ const recipes = [
         id: 3,
         title: 'Lemon Dessert',
         price: 4.78,
-        image: '../public/images/dessert.jpg',
+        image: '../images/dessert.jpg',
         description:
             "This comes straight from grandma's recipe book, every last ingredient has been sourced and is as authentic as can be imagined.",
     },
