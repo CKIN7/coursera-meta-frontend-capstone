@@ -1,7 +1,6 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
-import BookingForm from './components/BookingForm';
 
 import { describe, expect, it } from 'vitest';
 
