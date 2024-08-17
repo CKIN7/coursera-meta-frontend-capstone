@@ -1,4 +1,4 @@
-import logo from '../images/Logo .svg';
+import logo from '../../public/images/Logo .svg';
 
 export const Footer = () => {
     return (
